@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{582B93CA-9182-4F35-86F1-06C3DEE2C245}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Esuli.Scheggia</RootNamespace>
+    <AssemblyName>Esuli.Scheggia</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Esuli\Scheggia\Core\IHitEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IHitEnumeratorState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IHitEnumeratorState_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IHitEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IPostingEnumerator.cs" />
+    <Compile Include="src\Esuli\Scheggia\Core\IPostingEnumeratorState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IPostingEnumeratorState_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\IPostingEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\ArrayHitEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Core\ScoreFunction.cs" />
+    <Compile Include="src\Esuli\Scheggia\Enumerators\EmptyPostingEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\EmptyPostingEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\HitListEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\HitListEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\ScoreSortedPostingEnumerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="src\Esuli\Scheggia\Enumerators\ScoreSortedPostingEnumerator_Thit.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{9428d9ac-0d4d-4cfd-b868-95bd9da2d5cf}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

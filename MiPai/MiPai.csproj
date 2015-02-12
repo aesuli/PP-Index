@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB63DDE4-D081-4D72-97B0-242DC3812130}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Esuli.MiPai</RootNamespace>
+    <AssemblyName>Esuli.MiPai</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\BIC\BICFeaturesExtractor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\BIC\BICDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\BIC\BICFromFilenameExtractor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\BIC\BICSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\BIC\BICDescriptor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRData.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRDataDistanceFunction_Tselector.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRDataObjectHandler_Tselector.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRFastData.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRFastDataDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRFastDataExtractor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\CoPhIR\CoPhIRFastDataObjectSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\Corel\CorelData.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\Corel\CorelDataObjectSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\Corel\CorelDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\ImageThumbnail\ImageThumbnailFromFilenameExtractor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\ColorLayout.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\ColorStructure.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\CustomizableSelectAll.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\EdgeHistogram.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\HomogeneousTexture.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\ISelector.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\ScalableColor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectAll.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectColorLayout.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectColorStructure.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectEdgeHistogram.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectHomogeneousTexture.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\SelectScalableColor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\MPEG7\XmlUtils.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\ImageThumbnail\ImageThumbnail.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\ImageThumbnail\ImageThumbnailManhattanDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\ImageThumbnail\ImageThumbnailExtractor.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\ImageThumbnail\ImageThumbnailSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\DistanceFunctions\ByteEuclideanDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\DistanceFunctions\ByteManhattanDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\DistanceFunctions\DoubleManhattanDistanceFunction.cs" />
+    <Compile Include="src\Esuli\MiPai\DistanceFunctions\IDistanceFunction_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\DistanceFunctions\IDistance_Titem.cs" />
+    <Compile Include="src\Esuli\MiPai\Datatypes\IFeaturesExtractor_Titem_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\IndexingErrorDelegates.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\IIndexer_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\Indexer_Tfeatures_TfeaturesSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\IOffLineIndexer_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\IOnLineIndexer_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\ParallelIndexer_Tfeatures_TfeaturesSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Indexing\PermutationPrefixGenerator_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\CandidateResultEnumerator_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\IPermutationPrefixIndex.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\IPermutationPrefixIndex_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\IPermutationPrefixTree_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\MultiplePermutationPrefixIndex_Titem_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\PermutationPrefix.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\PermutationPrefixGeneratorInfo.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\PermutationPrefixSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\PermutationPrefixTreeNode.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\PermutationPrefixTree_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\PermutationType.cs" />
+    <Compile Include="src\Esuli\MiPai\Index\PermutationPrefixIndex_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\Constants.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\PermutationPrefixGeneratorSerialization_Tfeatures.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\SortedPermutationPrefixSerialization.cs" />
+    <Compile Include="src\Esuli\MiPai\IO\TreeSerialization_Tfeatures.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Base.csproj">
+      <Project>{9428d9ac-0d4d-4cfd-b868-95bd9da2d5cf}</Project>
+      <Name>Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Scheggia\Scheggia.csproj">
+      <Project>{582b93ca-9182-4f35-86f1-06c3dee2c245}</Project>
+      <Name>Scheggia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
